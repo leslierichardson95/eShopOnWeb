@@ -60,7 +60,7 @@ namespace Microsoft.eShopWeb.Web.Services
                 Id = basket.Id,
             };
         }
-        // Demo Here
+
         private async Task<List<BasketItemViewModel>> GetBasketItems(IReadOnlyCollection<BasketItem> basketItems)
         {
             var catalogItemsSpecification = new CatalogItemsSpecification(basketItems.Select(b => b.CatalogItemId).ToArray());
