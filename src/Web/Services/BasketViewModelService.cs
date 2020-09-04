@@ -60,7 +60,7 @@ namespace Microsoft.eShopWeb.Web.Services
                 Id = basket.Id,
             };
         }
-
+        // Demo Here
         private async Task<List<BasketItemViewModel>> GetBasketItems(IReadOnlyCollection<BasketItem> basketItems)
         {
             var catalogItemsSpecification = new CatalogItemsSpecification(basketItems.Select(b => b.CatalogItemId).ToArray());
@@ -76,7 +76,7 @@ namespace Microsoft.eShopWeb.Web.Services
                     UnitPrice = basketItem.UnitPrice,
                     Quantity = basketItem.Quantity,
                     CatalogItemId = basketItem.BasketId,
-                    PictureUrl = _uriComposer.ComposePicUri(catalogItem.PictureUri),
+                    PictureUrl = _uriComposer.ComposePicUri(catalogItem.Name),
                     ProductName = catalogItem.Name
                 };
                 return basketItemViewModel;
