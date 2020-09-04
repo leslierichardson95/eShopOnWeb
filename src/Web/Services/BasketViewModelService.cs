@@ -76,7 +76,7 @@ namespace Microsoft.eShopWeb.Web.Services
                     UnitPrice = basketItem.UnitPrice,
                     Quantity = basketItem.Quantity,
                     CatalogItemId = basketItem.BasketId,
-                    PictureUrl = _uriComposer.ComposePicUri(catalogItem.Name),
+                    PictureUrl = _uriComposer.ComposePicUri(catalogItem.Name), // add bug here
                     ProductName = catalogItem.Name
                 };
                 return basketItemViewModel;
