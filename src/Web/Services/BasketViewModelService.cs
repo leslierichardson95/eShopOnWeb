@@ -61,6 +61,7 @@ namespace Microsoft.eShopWeb.Web.Services
             };
         }
 
+        // adding comment
         private async Task<List<BasketItemViewModel>> GetBasketItems(IReadOnlyCollection<BasketItem> basketItems)
         {
             var catalogItemsSpecification = new CatalogItemsSpecification(basketItems.Select(b => b.CatalogItemId).ToArray());
